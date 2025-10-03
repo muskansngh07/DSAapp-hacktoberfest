@@ -351,6 +351,40 @@ footer {
   box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.08);
 }
 
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, text-decoration 0.2s;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #ffe5d4;
+  text-decoration: underline;
+  outline: 2px solid #ffe5d4;
+  outline-offset: 2px;
+}
+
+.footer-links a:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .contact-container {
