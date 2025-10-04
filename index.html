@@ -11,98 +11,80 @@
     <link rel="stylesheet" href="CSS/RightSidebar.css" />
   </head>
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">CodeDSA</div>
-      <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <button id="snakeToggle" class="snake-btn">
-          <span style="margin-left: 20px">Snake Cursor</span>
-        </button>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">CodeDSA</div>
+    <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
+    <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="home-container" >
+    <main>
+      <h1>Explore Topics</h1>
+      <div class="card-container">
+        <a class="card" href="./Arrays/arrays.html">
+          <h3>Arrays</h3>
+          <p>Problems related to arrays (TwoSum, MaximumSubarray, ...)</p>
+        </a>
+        <a class="card" href="./LinkedList/LL.html">
+          <h3>Linked Lists</h3>
+          <p>Single, double, circular linked list problems</p>
+        </a>
+        <a class="card" href="./StacksAndQueues/stackAndQueue.html">
+          <h3>Stacks & Queues</h3>
+          <p>Stack and Queue related problems</p>
+        </a>
+        <a class="card" href="./Strings/String.html">
+          <h3>Strings</h3>
+          <p>String manipulation problems</p>
+        </a>
+        <a class="card" href="./Recursion/recursion.html">
+          <h3>Recursion</h3>
+          <p>Recursive solutions and backtracking (Factorial, NQueens, ...)</p>
+        </a>
+        <a class="card" href="./BinarySearch/binarySearch.html">
+          <h3>Binary Search</h3>
+          <p>Binary search and its variations</p>
+        </a>
+        <a class="card" href="./Heaps/heap.html">
+          <h3>Heaps</h3>
+          <p>Heap / PriorityQueue problems</p>
+        </a>
+        <a class="card" href="./BinaryTrees/binaryTrees.html">
+          <h3>Binary Trees</h3>
+          <p>Binary tree problems (InorderTraversal, ...)</p>
+        </a>
+        <a class="card" href="./BinarySearchTrees/bst.html">
+          <h3>Binary Search Trees</h3>
+          <p>BST-specific problems (ValidateBST, ...)</p>
+        </a>
+        <a class="card" href="./Graphs/graph.html">
+          <h3>Graphs</h3>
+          <p>Graph algorithms (DFS, BFS, Dijkstra, ...)</p>
+        </a>
+        <a class="card" href="./Dynamic_Programming/dp.html">
+          <h3>Dynamic Programming</h3>
+          <p>DP problems (1D, 2D, memoization, tabulation)</p>
+        </a>
+        <a class="card" href="./Tries/tries.html">
+          <h3>Tries</h3>
+          <p>Trie / Prefix tree problems</p>
+        </a>
       </div>
-    </nav>
-    <!-- Main Content -->
-    <div class="home-container">
-      <main>
-        <h1>Explore Topics</h1>
-        <div class="card-container">
-          <a href="./Arrays/arrays.html" class="card" data-topic="arrays">
-            <h2>Arrays</h2>
-            <p>Problems related to arrays (TwoSum, MaximumSubarray, ...)</p>
-          </a>
-          <a href="./LinkedList/LL.html" class="card" data-topic="linkedlist">
-            <h2>Linked Lists</h2>
-            <p>Single, double, circular linked list problems</p>
-          </a>
-          <a
-            href="./StacksAndQueues/stackAndQueue.html"
-            class="card"
-            data-topic="stacks"
-          >
-            <h2>Stacks & Queues</h2>
-            <p>Stack and Queue related problems</p>
-          </a>
-          <a href="./Strings/String.html" class="card" data-topic="strings">
-            <h2>Strings</h2>
-            <p>String manipulation problems</p>
-          </a>
-          <a
-            href="./Recursion/recursion.html"
-            class="card"
-            data-topic="recursion"
-          >
-            <h2>Recursion</h2>
-            <p>
-              Recursive solutions and backtracking (Factorial, NQueens, ...)
-            </p>
-          </a>
-          <a
-            href="./BinarySearch/binarySearch.html"
-            class="card"
-            data-topic="binarysearch"
-          >
-            <h2>Binary Search</h2>
-            <p>Binary search and its variations</p>
-          </a>
-          <a href="./Heaps/heap.html" class="card" data-topic="heaps">
-            <h2>Heaps</h2>
-            <p>Heap / PriorityQueue problems</p>
-          </a>
-          <a
-            href="./BinaryTrees/binaryTrees.html"
-            class="card"
-            data-topic="binarytrees"
-          >
-            <h2>Binary Trees</h2>
-            <p>Binary tree problems (InorderTraversal, ...)</p>
-          </a>
-          <a href="./BinarySearchTrees/bst.html" class="card" data-topic="bst">
-            <h2>Binary Search Trees</h2>
-            <p>BST-specific problems (ValidateBST, ...)</p>
-          </a>
-          <a href="./Graphs/graph.html" class="card" data-topic="graphs">
-            <h2>Graphs</h2>
-            <p>Graph algorithms (DFS, BFS, Dijkstra, ...)</p>
-          </a>
-          <a href="./Dynamic_Programming/dp.html" class="card" data-topic="dp">
-            <h2>Dynamic Programming</h2>
-            <p>DP problems (1D, 2D, memoization, tabulation)</p>
-          </a>
-          <a href="./Tries/tries.html" class="card" data-topic="tries">
-            <h2>Tries</h2>
-            <p>Trie / Prefix tree problems</p>
-          </a>
-        </div>
-      </main>
-      <div class="right-sidebar">
-        <aside class="recently-viewed-sidebar">
-          <h2>🕒 <span>Recently Viewed</span></h2>
-          <ul id="recently-viewed-list"></ul>
+    </main>
+    <aside class="recently-viewed-sidebar">
+          <h2>🕒<span> &nbsp;Recently Viewed</span></h2>
+          <ul id="recently-viewed-list">
+              </ul>
           <button id="clear-history-btn">Clear History</button>
         </aside>
         <aside class="topics-filter-sidebar">
