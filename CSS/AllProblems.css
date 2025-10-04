@@ -477,3 +477,23 @@ body.dark-mode .problem-section li {
 body.dark-mode .problem-section strong {
   color: #d32f2f !important;  /* red for emphasis */
 }
+.flowchart-container {
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+.flowchart-container.active {
+  display: block;
+}
+.toggle-btn {
+  background: linear-gradient(90deg, #f5c686, #ffcc70, #ffd9a6);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
