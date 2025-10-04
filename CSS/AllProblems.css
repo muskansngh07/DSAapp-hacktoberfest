@@ -204,19 +204,23 @@ h2 {
   border-radius: 8px; /* optional, makes corners slightly rounded */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* optional, subtle shadow */
 }
-  .flowchart-container {
-      display: none;
-      margin-top: 10px;
-      padding: 15px;
-      border: 1px solid #ccc;
-      background: #f8f8f8;
-    }
-    .flowchart-container.active {
-      display: block;
-    }
-    .toggle-btn {
-      padding: 8px 12px;
-      background: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;}
+.flowchart-container {
+  display: none;
+  margin-top: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+}
+.flowchart-container.active {
+  display: block;
+}
+.toggle-btn {
+  background: linear-gradient(90deg, #f5c686, #ffcc70, #ffd9a6);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
