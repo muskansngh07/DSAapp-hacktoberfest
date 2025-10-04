@@ -376,7 +376,6 @@ footer {
 .footer-links a:hover,
 .footer-links a:focus {
   color: #ffe5d4;
-  text-decoration: underline;
   outline: 2px solid #ffe5d4;
   outline-offset: 2px;
 }
