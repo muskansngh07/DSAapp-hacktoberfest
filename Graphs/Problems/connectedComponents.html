@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,11 @@
     </ul>
     <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
     <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> de00e61
   </nav>
   
   <!-- Breadcrumb Navigation -->
@@ -34,36 +38,46 @@
     </nav>
   </div>
 
-  <main>
-    <h1>Connected Components</h1>
+    <main>
+      <h1>Connected Components</h1>
 
-    <section class="problem-section">
-      <h2>Problem Statement</h2>
-      <p>Count the number of connected components in an undirected graph.</p>
-      <p><strong>Example:</strong> Graph with edges [[0,1],[1,2],[3,4]] → 2 connected components: {0,1,2} and {3,4}</p>
-    </section>
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>Count the number of connected components in an undirected graph.</p>
+        <p>
+          <strong>Example:</strong> Graph with edges [[0,1],[1,2],[3,4]] → 2
+          connected components: {0,1,2} and {3,4}
+        </p>
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 1: DFS</h2>
-      <p><strong>Explanation:</strong> Traverse unvisited nodes recursively; each traversal counts as a component.</p>
-      <p><strong>Time Complexity:</strong> O(V + E)</p>
-      <p><strong>Space Complexity:</strong> O(V) recursion stack</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 1: DFS</h2>
+        <p>
+          <strong>Explanation:</strong> Traverse unvisited nodes recursively;
+          each traversal counts as a component.
+        </p>
+        <p><strong>Time Complexity:</strong> O(V + E)</p>
+        <p><strong>Space Complexity:</strong> O(V) recursion stack</p>
+        <pre class="pseudo-code">
 visited = set()
 count = 0
 for node in all_nodes:
     if node not visited:
         DFS(node)
         count += 1
-      </pre>
-    </section>
+      </pre
+        >
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 2: BFS</h2>
-      <p><strong>Explanation:</strong> Traverse using queue for unvisited nodes to find connected components.</p>
-      <p><strong>Time Complexity:</strong> O(V + E)</p>
-      <p><strong>Space Complexity:</strong> O(V)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 2: BFS</h2>
+        <p>
+          <strong>Explanation:</strong> Traverse using queue for unvisited nodes
+          to find connected components.
+        </p>
+        <p><strong>Time Complexity:</strong> O(V + E)</p>
+        <p><strong>Space Complexity:</strong> O(V)</p>
+        <pre class="pseudo-code">
 visited = set()
 count = 0
 for node in all_nodes:
@@ -77,15 +91,19 @@ for node in all_nodes:
                     queue.push(neighbor)
                     visited.add(neighbor)
         count += 1
-      </pre>
-    </section>
+      </pre
+        >
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 3: Union-Find</h2>
-      <p><strong>Explanation:</strong> Merge connected nodes; the number of disjoint sets = number of components.</p>
-      <p><strong>Time Complexity:</strong> O(E α(V))</p>
-      <p><strong>Space Complexity:</strong> O(V)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 3: Union-Find</h2>
+        <p>
+          <strong>Explanation:</strong> Merge connected nodes; the number of
+          disjoint sets = number of components.
+        </p>
+        <p><strong>Time Complexity:</strong> O(E α(V))</p>
+        <p><strong>Space Complexity:</strong> O(V)</p>
+        <pre class="pseudo-code">
 parent = [i for i in range(V)]
 function find(x):
     if parent[x] != x: parent[x] = find(parent[x])
@@ -95,14 +113,15 @@ function union(x, y):
 for each edge (u,v):
     union(u,v)
 count = number of unique parents
-      </pre>
-    </section>
-  </main>
+      </pre
+        >
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
-  <script src="../../index.js"></script>
-  <script src="../../JS/problemTracker.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+  </body>
 </html>

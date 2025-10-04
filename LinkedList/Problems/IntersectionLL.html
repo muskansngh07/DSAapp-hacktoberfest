@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -21,40 +21,53 @@
     </ul>
     <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
     <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> de00e61
   </nav>
 
-  <!-- Breadcrumb Navigation -->
-  <div class="breadcrumb-container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="../LL.html">Linked Lists</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Intersection of Two Linked Lists</li>
-      </ol>
-    </nav>
-  </div>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../LL.html">Linked Lists</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Intersection of Two Linked Lists
+          </li>
+        </ol>
+      </nav>
+    </div>
 
-  <main>
-    <h1>Intersection of Two Linked Lists</h1>
+    <main>
+      <h1>Intersection of Two Linked Lists</h1>
 
-    <!-- Problem Statement -->
-    <section class="problem-section">
-      <h2>Problem Statement</h2>
-      <p>
-        Given the heads of two singly linked lists <strong>headA</strong> and <strong>headB</strong>, 
-        return the node where the two lists intersect. If no intersection, return NULL.
-      </p>
-      <p><strong>Example:</strong> Input: A = 4 → 1 → 8 → 4 → 5, B = 5 → 6 → 1 → 8 → 4 → 5, Output: Node with value 8</p>
-    </section>
+      <!-- Problem Statement -->
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>
+          Given the heads of two singly linked lists <strong>headA</strong> and
+          <strong>headB</strong>, return the node where the two lists intersect.
+          If no intersection, return NULL.
+        </p>
+        <p>
+          <strong>Example:</strong> Input: A = 4 → 1 → 8 → 4 → 5, B = 5 → 6 → 1
+          → 8 → 4 → 5, Output: Node with value 8
+        </p>
+      </section>
 
-    <!-- Approaches -->
-    <section class="approach-section">
-      <h2>Approach 1: Hash Set</h2>
-      <p><strong>Explanation:</strong> Store nodes of first list in a set. Traverse second list, first common node is intersection.</p>
-      <p><strong>Time Complexity:</strong> O(m+n)</p>
-      <p><strong>Space Complexity:</strong> O(m)</p>
-      <pre class="pseudo-code">
+      <!-- Approaches -->
+      <section class="approach-section">
+        <h2>Approach 1: Hash Set</h2>
+        <p>
+          <strong>Explanation:</strong> Store nodes of first list in a set.
+          Traverse second list, first common node is intersection.
+        </p>
+        <p><strong>Time Complexity:</strong> O(m+n)</p>
+        <p><strong>Space Complexity:</strong> O(m)</p>
+        <pre class="pseudo-code">
 Function getIntersectionNode(headA, headB):
     Create an empty set called visitedNodes
 
@@ -71,22 +84,33 @@ Function getIntersectionNode(headA, headB):
 
     Return null  // No intersection
 
-      </pre>
-    </section>
-    <!-- Flowchart Section for Approach 1 -->
-<section class="flowchart-section">
-  <button class="flowchart-btn">View Flowchart</button>
-  <div class="flowchart-container" style="display: none; margin-top: 20px;">
-    <img src="../Flowcharts/hashset_intersection.jpg" alt="Intersection LL Flowchart" class="flowchart-img">
-  </div>
-</section>
+      </pre
+        >
+      </section>
+      <!-- Flowchart Section for Approach 1 -->
+      <section class="flowchart-section">
+        <button class="flowchart-btn">View Flowchart</button>
+        <div
+          class="flowchart-container"
+          style="display: none; margin-top: 20px"
+        >
+          <img
+            src="../Flowcharts/hashset_intersection.jpg"
+            alt="Intersection LL Flowchart"
+            class="flowchart-img"
+          />
+        </div>
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 2: Two Pointer Technique</h2>
-      <p><strong>Explanation:</strong> Traverse both lists. When one reaches end, redirect to other list’s head. They will meet at intersection.</p>
-      <p><strong>Time Complexity:</strong> O(m+n)</p>
-      <p><strong>Space Complexity:</strong> O(1)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 2: Two Pointer Technique</h2>
+        <p>
+          <strong>Explanation:</strong> Traverse both lists. When one reaches
+          end, redirect to other list’s head. They will meet at intersection.
+        </p>
+        <p><strong>Time Complexity:</strong> O(m+n)</p>
+        <p><strong>Space Complexity:</strong> O(1)</p>
+        <pre class="pseudo-code">
 Function getIntersectionNode(headA, headB):
     Set pointerA = headA
     Set pointerB = headB
@@ -104,23 +128,31 @@ Function getIntersectionNode(headA, headB):
 
     Return pointerA  // Either the intersection node or null
 
-      </pre>
-    </section>
-    <!-- Flowchart Section for Approach 2 -->
-<section class="flowchart-section">
-  <button class="flowchart-btn">View Flowchart</button>
-  <div class="flowchart-container" style="display: none; margin-top: 20px;">
-    <img src="../Flowcharts/two_pointer.jpg" alt="Intersection LL Flowchart" class="flowchart-img">
-  </div>
-</section>
-  </main>
+      </pre
+        >
+      </section>
+      <!-- Flowchart Section for Approach 2 -->
+      <section class="flowchart-section">
+        <button class="flowchart-btn">View Flowchart</button>
+        <div
+          class="flowchart-container"
+          style="display: none; margin-top: 20px"
+        >
+          <img
+            src="../Flowcharts/two_pointer.jpg"
+            alt="Intersection LL Flowchart"
+            class="flowchart-img"
+          />
+        </div>
+      </section>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
 
-  <script src="../../index.js"></script>
-  <script src="../../JS/problemTracker.js"></script>
-</body>
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+  </body>
 </html>

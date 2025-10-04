@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,11 @@
     </ul>
     <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
     <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> de00e61
   </nav>
   <!-- Breadcrumb Navigation -->
   <div class="breadcrumb-container">
@@ -36,18 +40,27 @@
   <main>
     <h1>Range Sum of BST</h1>
 
-    <section class="problem-section">
-      <h2>Problem Statement</h2>
-      <p>Calculate the sum of all node values in BST within a given range [L, R].</p>
-      <p><strong>Example:</strong> Input: root=[10,5,15,3,7,null,18], L=7, R=15 → Output: 32</p>
-    </section>
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>
+          Calculate the sum of all node values in BST within a given range [L,
+          R].
+        </p>
+        <p>
+          <strong>Example:</strong> Input: root=[10,5,15,3,7,null,18], L=7, R=15
+          → Output: 32
+        </p>
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach: Recursive DFS</h2>
-      <p><strong>Explanation:</strong> Traverse tree, accumulate values within range.</p>
-      <p><strong>Time Complexity:</strong> O(n)</p>
-      <p><strong>Space Complexity:</strong> O(h)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach: Recursive DFS</h2>
+        <p>
+          <strong>Explanation:</strong> Traverse tree, accumulate values within
+          range.
+        </p>
+        <p><strong>Time Complexity:</strong> O(n)</p>
+        <p><strong>Space Complexity:</strong> O(h)</p>
+        <pre class="pseudo-code">
 function rangeSum(node, L, R):
     if node == NULL: return 0
     sum = 0
@@ -58,14 +71,15 @@ function rangeSum(node, L, R):
     if node.val < R:
         sum += rangeSum(node.right, L, R)
     return sum
-      </pre>
-    </section>
-  </main>
+      </pre
+        >
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
-  <script src="../../index.js"></script>
-  <script src="../../JS/problemTracker.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,35 +20,46 @@
     </ul>
     <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
     <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> de00e61
   </nav>
 
-  <!-- Breadcrumb Navigation -->
-  <div class="breadcrumb-container">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-        <li class="breadcrumb-item"><a href="../bst.html">Binary Search Trees</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Kth Smallest/Largest in BST</li>
-      </ol>
-    </nav>
-  </div>
-  
-  <main>
-    <h1>Kth Smallest / Largest in BST</h1>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="../bst.html">Binary Search Trees</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Kth Smallest/Largest in BST
+          </li>
+        </ol>
+      </nav>
+    </div>
 
-    <section class="problem-section">
-      <h2>Problem Statement</h2>
-      <p>Find the Kth smallest or largest element in a BST.</p>
-      <p><strong>Example:</strong> Input: [3,1,4,null,2], k=2 → Output: 2</p>
-    </section>
+    <main>
+      <h1>Kth Smallest / Largest in BST</h1>
 
-    <section class="approach-section">
-      <h2>Approach 1: Inorder Traversal</h2>
-      <p><strong>Explanation:</strong> Inorder gives sorted elements. Return kth element.</p>
-      <p><strong>Time Complexity:</strong> O(n)</p>
-      <p><strong>Space Complexity:</strong> O(h)</p>
-      <pre class="pseudo-code">
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>Find the Kth smallest or largest element in a BST.</p>
+        <p><strong>Example:</strong> Input: [3,1,4,null,2], k=2 → Output: 2</p>
+      </section>
+
+      <section class="approach-section">
+        <h2>Approach 1: Inorder Traversal</h2>
+        <p>
+          <strong>Explanation:</strong> Inorder gives sorted elements. Return
+          kth element.
+        </p>
+        <p><strong>Time Complexity:</strong> O(n)</p>
+        <p><strong>Space Complexity:</strong> O(h)</p>
+        <pre class="pseudo-code">
 count = 0
 result = NULL
 function inorder(node, k):
@@ -57,15 +68,19 @@ function inorder(node, k):
     count += 1
     if count == k: result = node.val
     inorder(node.right, k)
-      </pre>
-    </section>
+      </pre
+        >
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 2: Reverse Inorder for Largest</h2>
-      <p><strong>Explanation:</strong> Traverse right->node->left to get descending order.</p>
-      <p><strong>Time Complexity:</strong> O(n)</p>
-      <p><strong>Space Complexity:</strong> O(h)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 2: Reverse Inorder for Largest</h2>
+        <p>
+          <strong>Explanation:</strong> Traverse right->node->left to get
+          descending order.
+        </p>
+        <p><strong>Time Complexity:</strong> O(n)</p>
+        <p><strong>Space Complexity:</strong> O(h)</p>
+        <pre class="pseudo-code">
 count = 0
 function reverseInorder(node, k):
     if node == NULL: return
@@ -73,14 +88,15 @@ function reverseInorder(node, k):
     count += 1
     if count == k: result = node.val
     reverseInorder(node.left, k)
-      </pre>
-    </section>
-  </main>
+      </pre
+        >
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
-  <script src="../../index.js"></script>
-  <script src="../../JS/problemTracker.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+  </body>
 </html>

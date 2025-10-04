@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -20,7 +20,11 @@
     </ul>
     <button id="snakeToggle" class="snake-btn"><span style="margin-left: 20px;">Snake Cursor</span></button>
     <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> de00e61
   </nav>
   
   <!-- Breadcrumb Navigation -->
@@ -34,21 +38,27 @@
     </nav>
   </div>
 
-  <main>
-    <h1>Topological Sort</h1>
+    <main>
+      <h1>Topological Sort</h1>
 
-    <section class="problem-section">
-      <h2>Problem Statement</h2>
-      <p>Return a topological ordering of a Directed Acyclic Graph (DAG).</p>
-      <p><strong>Example:</strong> Graph with edges [[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]] → [5,4,2,3,1,0]</p>
-    </section>
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>Return a topological ordering of a Directed Acyclic Graph (DAG).</p>
+        <p>
+          <strong>Example:</strong> Graph with edges
+          [[5,2],[5,0],[4,0],[4,1],[2,3],[3,1]] → [5,4,2,3,1,0]
+        </p>
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 1: DFS Post-order</h2>
-      <p><strong>Explanation:</strong> Perform DFS and add nodes to stack after exploring neighbors; reverse stack gives order.</p>
-      <p><strong>Time Complexity:</strong> O(V + E)</p>
-      <p><strong>Space Complexity:</strong> O(V) recursion stack</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 1: DFS Post-order</h2>
+        <p>
+          <strong>Explanation:</strong> Perform DFS and add nodes to stack after
+          exploring neighbors; reverse stack gives order.
+        </p>
+        <p><strong>Time Complexity:</strong> O(V + E)</p>
+        <p><strong>Space Complexity:</strong> O(V) recursion stack</p>
+        <pre class="pseudo-code">
 visited = set()
 stack = []
 function DFS(node):
@@ -61,15 +71,19 @@ for node in all_nodes:
     if node not visited:
         DFS(node)
 return reversed(stack)
-      </pre>
-    </section>
+      </pre
+        >
+      </section>
 
-    <section class="approach-section">
-      <h2>Approach 2: Kahn’s Algorithm (BFS)</h2>
-      <p><strong>Explanation:</strong> Use in-degree array; push nodes with 0 in-degree into queue and update in-degrees.</p>
-      <p><strong>Time Complexity:</strong> O(V + E)</p>
-      <p><strong>Space Complexity:</strong> O(V)</p>
-      <pre class="pseudo-code">
+      <section class="approach-section">
+        <h2>Approach 2: Kahn’s Algorithm (BFS)</h2>
+        <p>
+          <strong>Explanation:</strong> Use in-degree array; push nodes with 0
+          in-degree into queue and update in-degrees.
+        </p>
+        <p><strong>Time Complexity:</strong> O(V + E)</p>
+        <p><strong>Space Complexity:</strong> O(V)</p>
+        <pre class="pseudo-code">
 in_degree = [0]*V
 for u in all_nodes:
     for v in u.neighbors:
@@ -83,14 +97,15 @@ while queue not empty:
         if in_degree[neighbor]==0:
             queue.push(neighbor)
 return result
-      </pre>
-    </section>
-  </main>
+      </pre
+        >
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
-  <script src="../../index.js"></script>
-  <script src="../../JS/problemTracker.js"></script>
-</body>
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+  </body>
 </html>

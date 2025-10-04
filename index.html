@@ -1,13 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Topics Home</title>
-  <link rel="stylesheet" href="CSS/index.css">
-  <link rel="stylesheet" href="CSS/snake.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Topics Home</title>
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/snake.css" />
+    <link rel="stylesheet" href="CSS/topicsFilter.css" />
+    <link rel="stylesheet" href="CSS/RightSidebar.css" />
+  </head>
 
 <body>
   <!-- Navbar -->
@@ -84,15 +86,132 @@
           <ul id="recently-viewed-list">
               </ul>
           <button id="clear-history-btn">Clear History</button>
-    </aside>
-  </div> 
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 CodeDSA. All rights reserved.</p>
-  </footer>
-
-  <script src="index.js"></script>
-</body>
-
+        </aside>
+        <aside class="topics-filter-sidebar">
+          <h2>Topics Filter</h2>
+          <div class="filter-dropdown">
+            <button class="dropdown-toggle" id="topicsDropdownBtn">
+              Select Topics <span class="dropdown-arrow">▼</span>
+            </button>
+            <div class="dropdown-content" id="topicsDropdownContent">
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="arrays"
+                  checked
+                />
+                Arrays</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="linkedlist"
+                  checked
+                />
+                Linked Lists</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="stacks"
+                  checked
+                />
+                Stacks & Queues</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="strings"
+                  checked
+                />
+                Strings</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="recursion"
+                  checked
+                />
+                Recursion</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="binarysearch"
+                  checked
+                />
+                Binary Search</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="heaps"
+                  checked
+                />
+                Heaps</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="binarytrees"
+                  checked
+                />
+                Binary Trees</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="bst"
+                  checked
+                />
+                Binary Search Trees</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="graphs"
+                  checked
+                />
+                Graphs</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="dp"
+                  checked
+                />
+                Dynamic Programming</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  class="topic-filter"
+                  value="tries"
+                  checked
+                />
+                Tries</label
+              >
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 CodeDSA. All rights reserved.</p>
+    </footer>
+    <script src="index.js"></script>
+    <script src="JS/filterDropdownScript.js"></script>
+  </body>
 </html>
