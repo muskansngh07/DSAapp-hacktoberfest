@@ -26,18 +26,15 @@
         background-color: #1558b3;
       }
       .flowchart-image {
-        display: none; /* Images are hidden by default */
-        max-width: 100%;
-        margin-top: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 5px;
-        background-color: white;
-      }
-      /* This class makes the image visible when added by JavaScript */
-      .flowchart-image.visible {
-        display: block;
-      }
+  display: none; /* Hidden by default */
+  max-width: 100%;
+  margin-top: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: white;
+}
+
     </style>
   </head>
   <body>
@@ -167,27 +164,32 @@ return true
     <script src="../../JS/problemTracker.js"></script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const flowchartButtons = document.querySelectorAll('.flowchart-btn');
+document.addEventListener('DOMContentLoaded', function() {
+  const flowchartButtons = document.querySelectorAll('.flowchart-btn');
 
-        flowchartButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            const container = this.closest('.flowchart-container');
-            if (!container) return;
+  flowchartButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const container = this.closest('.flowchart-container');
+      const flowchartImage = container.querySelector('.flowchart-image');
+      if (!flowchartImage) return;
 
-            const flowchartImage = container.querySelector('.flowchart-image');
-            if (!flowchartImage) return;
+      // Get current visibility state (default hidden)
+      const isVisible = flowchartImage.dataset.visible === 'true';
 
-            if (flowchartImage.classList.contains('visible')) {
-              flowchartImage.classList.remove('visible');
-              this.textContent = 'Hide Flowchart';
-            } else {
-              flowchartImage.classList.add('visible');
-              this.textContent = 'View Flowchart';
-            }
-          });
-        });
-      });
-    </script>
+      if (isVisible) {
+        // Hide the image
+        flowchartImage.style.display = 'none';
+        flowchartImage.dataset.visible = 'false';
+        this.textContent = 'View Flowchart';
+      } else {
+        // Show the image
+        flowchartImage.style.display = 'block';
+        flowchartImage.dataset.visible = 'true';
+        this.textContent = 'Hide Flowchart';
+      }
+    });
+  });
+});
+</script>
   </body>
 </html>
