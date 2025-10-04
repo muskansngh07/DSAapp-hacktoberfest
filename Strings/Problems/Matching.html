@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,35 +7,6 @@
     <link rel="stylesheet" href="../../CSS/AllProblems.css" />
     <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
     <link rel="stylesheet" href="../../CSS/snake.css" />
-    <style>
-      .flowchart-btn {
-        background-color: #1a73e8;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 10px;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .flowchart-btn:hover {
-        background-color: #1558b3;
-      }
-      .flowchart-image {
-  display: none; /* Hidden by default */
-  max-width: 100%;
-  margin-top: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: white;
-}
-
-    </style>
   </head>
   <body>
     <!-- Navbar -->
@@ -53,89 +24,66 @@
       </div>
     </nav>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb-container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="../String.html">Strings</a></li>
-          <li class="breadcrumb-item active" aria-current="page">
-            String Matching / Pattern Matching
-          </li>
-        </ol>
-      </nav>
-    </div>
+  <!-- Breadcrumb Navigation -->
+  <div class="breadcrumb-container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="../String.html">Strings</a></li>
+        <li class="breadcrumb-item active" aria-current="page">String Matching / Pattern Matching</li>
+      </ol>
+    </nav>
+  </div>
 
-    <main>
-      <h1>String Matching / Pattern Matching</h1>
+  <main>
+    <h1>String Matching / Pattern Matching</h1>
 
-      <!-- Problem Statement -->
-      <section class="problem-section">
-        <h2>Problem Statement</h2>
-        <p>
-          Given a text string <strong>txt</strong> and a pattern
-          <strong>pat</strong>, find all occurrences of the pattern in the text.
-        </p>
-        <p>
-          <strong>Example:</strong> Input: txt = "ababcabc", pat = "abc" →
-          Output: [2,5]
-        </p>
-      </section>
+    <!-- Problem Statement -->
+    <section class="problem-section">
+      <h2>Problem Statement</h2>
+      <p>
+        Given a text string <strong>txt</strong> and a pattern <strong>pat</strong>, find all occurrences of the pattern in the text.
+      </p>
+      <p><strong>Example:</strong> Input: txt = "ababcabc", pat = "abc" → Output: [2,5]</p>
+    </section>
 
-      <!-- Approaches -->
-      <section class="approach-section">
-        <h2>Approach 1: Brute Force</h2>
-        <p>
-          <strong>Explanation:</strong> Check every substring of txt of length
-          len(pat) for equality.
-        </p>
-        <p>
-          <strong>Time Complexity:</strong> O(n*m) where n=len(txt), m=len(pat)
-        </p>
-        <p><strong>Space Complexity:</strong> O(1)</p>
-        <pre class="pseudo-code">
+    <!-- Approaches -->
+    <section class="approach-section">
+      <h2>Approach 1: Brute Force</h2>
+      <p><strong>Explanation:</strong> Check every substring of txt of length len(pat) for equality.</p>
+      <p><strong>Time Complexity:</strong> O(n*m) where n=len(txt), m=len(pat)</p>
+      <p><strong>Space Complexity:</strong> O(1)</p>
+      <pre class="pseudo-code">
 for i = 0 to n-m:
     if txt[i..i+m-1] == pat:
         add i to result
 return result
-        </pre>
-        <div class="flowchart-container">
-            <button class="flowchart-btn">View Flowchart</button>
-            <img src="../Flowcharts/5stringapproach1.png" alt="Flowchart for Brute Force Approach" class="flowchart-image">
-        </div>
+      </pre
+        >
       </section>
 
-      <section class="approach-section">
-        <h2>Approach 2: Rabin-Karp Algorithm</h2>
-        <p>
-          <strong>Explanation:</strong> Use rolling hash to compare pattern and
-          substring efficiently.
-        </p>
-        <p><strong>Time Complexity:</strong> O(n) average, O(n*m) worst-case</p>
-        <p><strong>Space Complexity:</strong> O(1)</p>
-        <pre class="pseudo-code">
+    <section class="approach-section">
+      <h2>Approach 2: Rabin-Karp Algorithm</h2>
+      <p><strong>Explanation:</strong> Use rolling hash to compare pattern and substring efficiently.</p>
+      <p><strong>Time Complexity:</strong> O(n) average, O(n*m) worst-case</p>
+      <p><strong>Space Complexity:</strong> O(1)</p>
+      <pre class="pseudo-code">
 hash_pat = hash(pat)
 for i = 0 to n-m:
     hash_sub = hash(txt[i..i+m-1])
     if hash_sub == hash_pat and txt[i..i+m-1] == pat:
         add i to result
 return result
-        </pre>
-        <div class="flowchart-container">
-            <button class="flowchart-btn">View Flowchart</button>
-            <img src="../Flowcharts/5stringapproach2.png" alt="Flowchart for Rabin-Karp Algorithm Approach" class="flowchart-image">
-        </div>
+      </pre
+        >
       </section>
 
-      <section class="approach-section">
-        <h2>Approach 3: KMP Algorithm (Optimal)</h2>
-        <p>
-          <strong>Explanation:</strong> Preprocess pattern to create lps array,
-          then traverse txt to find matches efficiently.
-        </p>
-        <p><strong>Time Complexity:</strong> O(n+m)</p>
-        <p><strong>Space Complexity:</strong> O(m)</p>
-        <pre class="pseudo-code">
+    <section class="approach-section">
+      <h2>Approach 3: KMP Algorithm (Optimal)</h2>
+      <p><strong>Explanation:</strong> Preprocess pattern to create lps array, then traverse txt to find matches efficiently.</p>
+      <p><strong>Time Complexity:</strong> O(n+m)</p>
+      <p><strong>Space Complexity:</strong> O(m)</p>
+      <pre class="pseudo-code">
 build lps array for pat
 i = 0, j = 0
 while i < n:
@@ -149,50 +97,17 @@ while i < n:
     else:
         i++
 return result
-        </pre>
-        <div class="flowchart-container">
-            <button class="flowchart-btn">View Flowchart</button>
-            <img src="../Flowcharts/5stringapproach3.png" alt="Flowchart for KMP Algorithm Approach" class="flowchart-image">
-        </div>
+      </pre
+        >
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+  </footer>
 
     <script src="../../index.js"></script>
     <script src="../../JS/problemTracker.js"></script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const flowchartButtons = document.querySelectorAll('.flowchart-btn');
-
-  flowchartButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const container = this.closest('.flowchart-container');
-      const flowchartImage = container.querySelector('.flowchart-image');
-      if (!flowchartImage) return;
-
-      // Check current state using data attribute (default false)
-      const isVisible = flowchartImage.dataset.visible === 'true';
-
-      if (isVisible) {
-        // Hide image
-        flowchartImage.style.display = 'none';
-        flowchartImage.dataset.visible = 'false';
-        this.textContent = 'View Flowchart';
-      } else {
-        // Show image
-        flowchartImage.style.display = 'block';
-        flowchartImage.dataset.visible = 'true';
-        this.textContent = 'Hide Flowchart';
-      }
-    });
-  });
-});
-</script>
-
   </body>
 </html>
