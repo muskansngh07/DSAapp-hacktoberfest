@@ -194,7 +194,7 @@ main h1 {
 
 .card h3 {
   margin-bottom: 1rem;
-  color: #f16363; /* keep warm red for headings */
+  color: black; 
   font-weight: 600;
 }
 
