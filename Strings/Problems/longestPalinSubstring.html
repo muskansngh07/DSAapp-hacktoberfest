@@ -7,17 +7,7 @@
     <link rel="stylesheet" href="../../CSS/AllProblems.css" />
     <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
     <link rel="stylesheet" href="../../CSS/snake.css" />
-    <style>
-      .flowchart-image {
-  display: none;
-  max-width: 100%;
-  margin-top: 15px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  background-color: white;
-}
-    </style>
+    <link rel="stylesheet" href="../../CSS/Flowchart.css"/>
   </head>
   <body>
     <!-- Navbar -->
@@ -123,35 +113,7 @@ return longest palindrome
 
     <script src="../../index.js"></script>
     <script src="../../JS/problemTracker.js"></script>
-
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const flowchartButtons = document.querySelectorAll('.flowchart-btn');
-
-  flowchartButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const container = this.closest('.flowchart-container');
-      const flowchartImage = container.querySelector('.flowchart-image');
-      if (!flowchartImage) return;
-
-      // Get current state from data attribute (default false)
-      const isVisible = flowchartImage.dataset.visible === 'true';
-
-      if (isVisible) {
-        // Hide the image
-        flowchartImage.style.display = 'none';
-        flowchartImage.dataset.visible = 'false';
-        this.textContent = 'View Flowchart';
-      } else {
-        // Show the image
-        flowchartImage.style.display = 'block';
-        flowchartImage.dataset.visible = 'true';
-        this.textContent = 'Hide Flowchart';
-      }
-    });
-  });
-});
-</script>
+    <script src="../../JS/Flowcharts.js"></script>
 
   </body>
 </html>
