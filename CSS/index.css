@@ -269,7 +269,7 @@ main h1::after {
   padding: 12px 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
-  z-index: 1000;
+  /*z-index: 1000;*/
 }
 
 /* Custom fix for clock icon misalignment in collapsed state */
