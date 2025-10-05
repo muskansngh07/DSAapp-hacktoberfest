@@ -1,11 +1,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-  const flowchartButtons = document.querySelectorAll('.flowchart-btn');
+  const flowchartButtons = document.querySelectorAll('.fc-button');
 
   flowchartButtons.forEach(button => {
     button.addEventListener('click', function() {
-      const container = this.closest('.flowchart-container');
-      const flowchartImage = container.querySelector('.flowchart-image');
+      const container = this.closest('.fc-container');
+      const flowchartImage = container.querySelector('.fc-image');
       if (!flowchartImage) return;
 
       // Get visibility state (default = false)
