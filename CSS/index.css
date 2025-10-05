@@ -34,6 +34,16 @@ a:visited {
   z-index: 100;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* space between logo and text */
+}
+
+.logo-img img {
+  height: 50px;
+  width: 50px;
+}
 
 .navbar .nav-links {
   list-style: none;
@@ -259,7 +269,7 @@ main h1::after {
   padding: 12px 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: sans-serif;
-  z-index: 1000;
+  /*z-index: 1000;*/
 }
 
 /* Custom fix for clock icon misalignment in collapsed state */
