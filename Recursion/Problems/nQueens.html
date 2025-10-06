@@ -70,9 +70,8 @@ function solve(row):
             solve(row+1)
             remove queen
 solve(0)
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
-      <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre>
+            <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
     </section>
 
@@ -94,9 +93,8 @@ function solve(row):
             solve(row+1)
             remove queen and sets
 solve(0)
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
-      <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre>
+            <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
     </section>
 
@@ -116,9 +114,8 @@ function solve(row, cols, diag1, diag2):
         available = available & (available-1)
         solve(row+1, cols|pos, (diag1|pos)<<1, (diag2|pos)>>1)
 solve(0,0,0,0)
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
-      <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre>
+            <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
     </section>
   </main>

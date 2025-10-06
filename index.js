@@ -98,9 +98,11 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRecentProblems();
   }
 
+
   // Topics Filter Dropdown Toggle Logic
   const dropdownBtn = document.getElementById('topicsDropdownBtn');
   const dropdownContent = document.getElementById('topicsDropdownContent');
+
 
   if (dropdownBtn && dropdownContent) {
     // Toggle dropdown on button click
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dropdownContent.classList.toggle('show');
     });
 
+
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
       if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
@@ -116,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
 
   // Topics Filter Logic
   const topicFilters = document.querySelectorAll('.topic-filter');
@@ -141,6 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
 });
 function navigateTo(page) {
   window.location.href = page;
@@ -149,6 +154,37 @@ function navigateTo(page) {
 // Dark Mode toggle logic with persistence
 const darkModeToggle = document.getElementById("darkModeToggle");
 if (darkModeToggle) {
+  // Check localStorage for saved dark mode state
+  let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
+
+  // Initialize dark mode state based on saved preference
+  if (darkModeEnabled) {
+    enableDarkMode();
+  }
+
+  darkModeToggle.addEventListener("click", () => {
+    darkModeEnabled = !darkModeEnabled;
+    // Save state to localStorage
+    localStorage.setItem('darkModeEnabled', darkModeEnabled);
+
+    if (darkModeEnabled) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  });
+
+  function enableDarkMode() {
+    document.body.classList.add("dark-mode");
+    darkModeToggle.innerHTML = '☀️ Light Mode';
+    darkModeToggle.classList.add("active");
+  }
+
+  function disableDarkMode() {
+    document.body.classList.remove("dark-mode");
+    darkModeToggle.innerHTML = '🌙 Dark Mode';
+    darkModeToggle.classList.remove("active");
+  }
   // Check localStorage for saved dark mode state
   let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 
