@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kth Largest / Smallest Element - CodeDSA</title>
  <link rel="stylesheet" href="../../CSS/AllProblems.css">
-  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
+  <link rel="stylesheet" href="../../CSS/copyToClipboard.css"> 
   <link rel="stylesheet" href="../../CSS/breadcrumb.css">
   <link rel="stylesheet" href="../../CSS/snake.css">
+  <link rel="stylesheet" href="../../CSS/Flowchart.css"/>
 </head>
 
 <body>
@@ -75,7 +76,13 @@
 sort(nums)
 return nums[n-k]  # kth largest
 return nums[k-1]  # kth smallest
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre
+        ></pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/heapproblem1app1.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
 
     </section>
 
@@ -94,9 +101,13 @@ for num in nums:
     if heap size > k:
         remove min element
 return heap root
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
-    </section>
+      </pre
+        ></pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/heapproblem1app2.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
 
     <section class="approach-section">
       <h2>Approach 3: Quickselect (Optimal Average)</h2>
@@ -115,19 +126,18 @@ elif k in left:
     recurse on left
 else:
     return pivot
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
-  </footer>
+      </pre
+        ></pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/heapproblem1app3.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
+    </main>
 
   <script src="../../index.js"></script>
   <script src="../../copyToClipboard.js"></script>
   <script src="../../JS/problemTracker.js"></script>
+   <script src="../../JS/Flowcharts.js"></script>
 </body>
-
 </html>
