@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>String Matching / Pattern Matching - CodeDSA</title>
-  <link rel="stylesheet" href="../../CSS/AllProblems.css" />
-  <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
-  <link rel="stylesheet" href="../../CSS/snake.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Matching / Pattern Matching - CodeDSA</title>
+    <link rel="stylesheet" href="../../CSS/AllProblems.css" />
+    <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
+    <link rel="stylesheet" href="../../CSS/snake.css" />
+    <link rel="stylesheet" href="../../CSS/Flowchart.css"/>
+        <link rel="stylesheet" href="../../CSS/copyToClipboard.css"/>
 
-<body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo-container">
-      <div class="logo-img">
-        <img src="../../images/logo.png" alt="Logo">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo-container">
+  <div class="logo-img">
+    <img src="../../images/logo.png" alt="Logo">
+  </div>
+  <div class="logo">CodeDSA</div>
+</div>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+        <button id="snakeToggle" class="snake-btn">
+          <span style="margin-left: 20px">Snake Cursor</span>
+        </button>
       </div>
       <div class="logo">CodeDSA</div>
     </div>
@@ -66,9 +80,14 @@ for i = 0 to n-m:
     if txt[i..i+m-1] == pat:
         add i to result
 return result
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
-    </section>
+      </pre
+        >
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/5stringapproach1.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
 
     <section class="approach-section">
       <h2>Approach 2: Rabin-Karp Algorithm</h2>
@@ -82,9 +101,14 @@ for i = 0 to n-m:
     if hash_sub == hash_pat and txt[i..i+m-1] == pat:
         add i to result
 return result
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre
+        >          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
-    </section>
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/5stringapproach2.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
 
     <section class="approach-section">
       <h2>Approach 3: KMP Algorithm (Optimal)</h2>
@@ -106,10 +130,15 @@ while i < n:
     else:
         i++
 return result
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      </pre
+        >          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
 
-    </section>
-  </main>
+        <div class="fc-container">
+    <button class="fc-button">View Flowchart</button>
+    <img src="../Flowcharts/5stringapproach3.png" alt="Heap Sort Flowchart" class="fc-image" />
+  </div>
+      </section>
+    </main>
 
   <!-- Footer -->
   <footer>
@@ -119,6 +148,6 @@ return result
   <script src="../../index.js"></script>
   <script src="../../copyToClipboard.js"></script>
   <script src="../../JS/problemTracker.js"></script>
+    <script src="../../JS/Flowcharts.js"></script>
 </body>
-
 </html>
