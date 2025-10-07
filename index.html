@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="CSS/snake.css" />
     <link rel="stylesheet" href="CSS/topicsFilter.css" />
     <link rel="stylesheet" href="CSS/RightSidebar.css" />
+    <link rel="stylesheet" href="CSS/oneQuestionQuiz.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo-container">
-  <div class="logo-img">
-    <img src="/DSA-Patterns-And-Problems/Images/logo.png" alt="Logo">
-  </div>
-  <div class="logo">CodeDSA</div>
-
-</div>
+        <div class="logo-img">
+          <img src="/DSA-Patterns-And-Problems/Images/logo.png" alt="Logo">
+        </div>
+        <div class="logo">CodeDSA</div>
+      </div>
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -31,7 +31,8 @@
         <button id="darkModeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
       </div>
     </nav>
-
+    <div id="one-question-container">
+          </div>
     <div class="home-container">
       <main>
         <h1>Explore Topics</h1>
@@ -266,5 +267,8 @@
 
     <script src="index.js"></script>
     <script src="JS/filterDropdownScript.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="JS/oneQuestionQuiz.js"></script>
   </body>
 </html>
