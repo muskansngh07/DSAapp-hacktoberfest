@@ -123,7 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Topics Filter Logic
   const topicFilters = document.querySelectorAll('.topic-filter');
-  const cards = document.querySelectorAll('.card[data-topic]');
+  const cards = document.querySelectorAll('.card');
+  console.log(topicFilters, cards);
   if (topicFilters.length > 0 && cards.length > 0) {
     topicFilters.forEach((checkbox) => {
       checkbox.addEventListener('change', filterCards);
@@ -133,9 +134,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const checkedTopics = Array.from(topicFilters)
         .filter((cb) => cb.checked)
         .map((cb) => cb.value);
+        console.log(checkedTopics)
       // Show/hide cards based on filter
       cards.forEach((card) => {
-        const cardTopic = card.getAttribute('data-topic');
+        console.log(card);
+        const cardTopic = card.getAttribute('topic');
         if (checkedTopics.includes(cardTopic)) {
           card.style.display = '';
         } else {
@@ -186,35 +189,5 @@ if (darkModeToggle) {
     darkModeToggle.classList.remove("active");
   }
   // Check localStorage for saved dark mode state
-  let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
-
-  // Initialize dark mode state based on saved preference
-  if (darkModeEnabled) {
-    enableDarkMode();
-  }
-
-  darkModeToggle.addEventListener("click", () => {
-    darkModeEnabled = !darkModeEnabled;
-    // Save state to localStorage
-    localStorage.setItem('darkModeEnabled', darkModeEnabled);
-
-    if (darkModeEnabled) {
-      enableDarkMode();
-    } else {
-      disableDarkMode();
-    }
-  });
-
-  function enableDarkMode() {
-    document.body.classList.add("dark-mode");
-    darkModeToggle.innerHTML = '☀️ Light Mode';
-    darkModeToggle.classList.add("active");
-  }
-
-  function disableDarkMode() {
-    document.body.classList.remove("dark-mode");
-    darkModeToggle.innerHTML = '🌙 Dark Mode';
-    darkModeToggle.classList.remove("active");
-  }
 }
 
