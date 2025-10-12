@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../../CSS/AllProblems.css" />
   <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
   <link rel="stylesheet" href="../../CSS/snake.css" />
+  <link rel="stylesheet" href="../../CSS/Flowchart.css">
 </head>
 
 <body>
@@ -73,7 +74,10 @@ for i = 0 to n-1:
   right_max = max(height[i..n-1])
   water += min(left_max, right_max) - height[i]
           </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Trapping_rain_water_approach_1.png" alt="Brute Force" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -90,7 +94,10 @@ right_max[n-1] = height[n-1]
 for i = n-2 downto 0: right_max[i] = max(right_max[i+1], height[i])
 for i = 0 to n-1: water += min(left_max[i], right_max[i]) - height[i]
           </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Trapping_rain_water_approach_2.png" alt="Prefix Sum" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -113,7 +120,10 @@ while left < right:
     water += right_max - height[right]
     right--
           </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Trapping_rain_water_approach_3.png" alt="Kadane's Algorithm" class="fc-image" />
+      </div>
     </section>
   </main>
   <!-- Footer -->
@@ -124,6 +134,7 @@ while left < right:
   <script src="../../index.js"></script>
   <script src="../../copyToClipboard.js"></script>
   <script src="../../JS/problemTracker.js"></script>
+  <script src="../../JS/Flowcharts.js"></script>
 </body>
 
 </html>

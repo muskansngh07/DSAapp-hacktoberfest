@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../../CSS/AllProblems.css" />
   <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
   <link rel="stylesheet" href="../../CSS/snake.css" />
+  <link rel="stylesheet" href="../../CSS/Flowchart.css">
 </head>
 
 <body>
@@ -74,7 +75,10 @@ for i in 0..n-1:
         sum += nums[j]
         max_sum = max(max_sum,sum)
 return max_sum    </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Max_subarray_approach_1.png" alt="Brute force" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -94,7 +98,10 @@ for i in 0..n-1:
     for j in i..n-1:
         max_sum = max(max_sum, prefix[j+1]-prefix[i])    </pre> <button class="copyToClipboard"
         onclick="copyToClipboard(this)">Copy!</button>
-
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Max_subarray_approach_2.png" alt="Prefix sum" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -109,7 +116,10 @@ for i in 1..n-1:
     current_sum = max(nums[i], current_sum+nums[i])
     max_sum = max(max_sum, current_sum)
 return max_sum    </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+          <div class="fc-container">
+            <button class="fc-button">View Flowchart</button>
+            <img src="../Flowcharts/Max_subarray_approach_3.png" alt="Kadane's algorithm" class="fc-image" />
+          </div>
     </section>
   </main>
   <!-- Footer -->
@@ -120,6 +130,7 @@ return max_sum    </pre> <button class="copyToClipboard" onclick="copyToClipboar
   <script src="../../index.js"></script>
   <script src="../../copyToClipboard.js"></script>
   <script src="../../JS/problemTracker.js"></script>
+  <script src="../../JS/Flowcharts.js"></script>
 </body>
 
 </html>
