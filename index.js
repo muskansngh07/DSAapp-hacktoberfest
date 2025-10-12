@@ -121,25 +121,30 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // Topics Filter Logic
+  // Topics Filter and Search Logic
   const topicFilters = document.querySelectorAll('.topic-filter');
-  const cards = document.querySelectorAll('.card');
-  console.log(topicFilters, cards);
+  const searchInput = document.getElementById('searchInput');
+  const cards = document.querySelectorAll('.card[data-topic]');
   if (topicFilters.length > 0 && cards.length > 0) {
     topicFilters.forEach((checkbox) => {
       checkbox.addEventListener('change', filterCards);
     });
+    if (searchInput) {
+      searchInput.addEventListener('input', filterCards);
+    }
     function filterCards() {
       // Get all checked filter values
       const checkedTopics = Array.from(topicFilters)
         .filter((cb) => cb.checked)
         .map((cb) => cb.value);
-        console.log(checkedTopics)
-      // Show/hide cards based on filter
+      const searchTerm = searchInput ? searchInput.value.toLowerCase() : '';
+      // Show/hide cards based on filter and search
       cards.forEach((card) => {
-        console.log(card);
-        const cardTopic = card.getAttribute('topic');
-        if (checkedTopics.includes(cardTopic)) {
+        const cardTopic = card.getAttribute('data-topic');
+        const cardText = card.textContent.toLowerCase();
+        const topicMatch = checkedTopics.includes(cardTopic);
+        const searchMatch = cardText.includes(searchTerm);
+        if (topicMatch && searchMatch) {
           card.style.display = '';
         } else {
           card.style.display = 'none';
@@ -147,6 +152,43 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   }
+
+  // Progress Tracking Logic
+  const completedTopics = JSON.parse(localStorage.getItem('completedTopics')) || [];
+
+  // Add progress elements to cards
+  cards.forEach(card => {
+    const indicator = document.createElement('span');
+    indicator.className = 'progress-indicator';
+    indicator.textContent = '✓';
+    card.appendChild(indicator);
+
+    const bar = document.createElement('div');
+    bar.className = 'progress-bar';
+    card.appendChild(bar);
+  });
+
+  // Update progress
+  function updateProgress() {
+    cards.forEach(card => {
+      const topic = card.getAttribute('data-topic');
+      const bar = card.querySelector('.progress-bar');
+      if (completedTopics.includes(topic)) {
+        card.classList.add('completed');
+        bar.style.width = '100%';
+      } else {
+        card.classList.remove('completed');
+        bar.style.width = '0%';
+      }
+    });
+  }
+
+  updateProgress();
+
+  // Stagger animation for cards
+  cards.forEach((card, index) => {
+    card.style.animationDelay = `${index * 0.1}s`;
+  });
 
 
 });
@@ -188,6 +230,23 @@ if (darkModeToggle) {
     darkModeToggle.innerHTML = '🌙 Dark Mode';
     darkModeToggle.classList.remove("active");
   }
-  // Check localStorage for saved dark mode state
+
+  // Auto-scroll for card container
+  let autoScrollInterval;
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      const container = document.querySelector('.card-container');
+      container.scrollLeft += 300;
+      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        container.scrollLeft = 0;
+      }
+    }, 3000);
+  }
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+  startAutoScroll();
+  document.querySelector('.card-container').addEventListener('mouseenter', stopAutoScroll);
+  document.querySelector('.card-container').addEventListener('mouseleave', startAutoScroll);
 }
 
