@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product of array - CodeDSA</title>
- <link rel="stylesheet" href="../../CSS/AllProblems.css">
-  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
+  <link rel="stylesheet" href="../../CSS/AllProblems.css">
+  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
+  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
   <link rel="stylesheet" href="../../CSS/breadcrumb.css">
   <link rel="stylesheet" href="../../CSS/snake.css">
+  <link rel="stylesheet" href="../../CSS/Flowchart.css">
 
 </head>
 
@@ -72,8 +74,11 @@ for i in 0..n-1:
     for j in 0..n-1:
         if i != j:
             prod *= nums[j]
-    output[i]=prod    </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+    output[i]=prod    </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Product_of_array_approach_1.png" alt="Brute force" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -92,8 +97,12 @@ suffix[n-1]=1
 for i in n-2..0:
     suffix[i]=suffix[i+1]*nums[i+1]
 for i in 0..n-1:
-    output[i]=prefix[i]*suffix[i]    </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+    output[i]=prefix[i]*suffix[i]    </pre> <button class="copyToClipboard"
+        onclick="copyToClipboard(this)">Copy!</button>
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Product_of_array_approach_2.png" alt="Prefix and suffix arrays" class="fc-image" />
+      </div>
     </section>
 
     <section class="approach-section">
@@ -111,8 +120,11 @@ for i in 1..n-1:
 suffix=1
 for i in n-1..0:
     output[i] *= suffix
-    suffix *= nums[i]    </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+    suffix *= nums[i]    </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      <div class="fc-container">
+        <button class="fc-button">View Flowchart</button>
+        <img src="../Flowcharts/Product_of_array_approach_3.png" alt="Optimal approach" class="fc-image" />
+      </div>
     </section>
   </main>
   <!-- Footer -->
@@ -123,7 +135,7 @@ for i in n-1..0:
   <script src="../../index.js"></script>
   <script src="../../copyToClipboard.js"></script>
   <script src="../../copyToClipboard.js"></script>
-
+  <script src="../../JS/Flowcharts.js"></script>
   <script src="../../JS/problemTracker.js"></script>
 </body>
 

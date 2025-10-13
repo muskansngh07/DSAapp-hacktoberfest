@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Two Sum - CodeDSA</title>
- <link rel="stylesheet" href="../../CSS/AllProblems.css">
-  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
+  <link rel="stylesheet" href="../../CSS/AllProblems.css">
+  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
+  <link rel="stylesheet" href="../../CSS/copyToClipboard.css">
   <link rel="stylesheet" href="../../CSS/breadcrumb.css">
   <link rel="stylesheet" href="../../CSS/snake.css">
+  <link rel="stylesheet" href="../../CSS/Flowchart.css">
 </head>
 
 <body>
@@ -77,7 +79,11 @@ for i = 0 to n-1:
     for j = i+1 to n-1:
         if nums[i] + nums[j] == target:
             return [i, j]
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+          </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+          <button class="fc-button">View Flowchart</button>
+          <img src="../Flowcharts/Two_sum_approach_1.png" alt="Heap Sort Flowchart" class="fc-image" />
+        </div>
 
       </section>
 
@@ -96,8 +102,11 @@ for i = 0 to n-1:
         return [map[nums[i]], i]
     else:
         map[target - nums[i]] = i
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+          </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+          <button class="fc-button">View Flowchart</button>
+          <img src="../Flowcharts/Two_sum_approach_2.png" alt="Heap Sort Flowchart" class="fc-image" />
+        </div>
       </section>
 
       <section class="approach-section">
@@ -124,8 +133,11 @@ while left < right:
         left++
     else:
         right--
-          </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
-
+          </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <div class="fc-container">
+          <button class="fc-button">View Flowchart</button>
+          <img src="../Flowcharts/Two_sum_approach_3.png" alt="Heap Sort Flowchart" class="fc-image" />
+        </div>
       </section>
     </main>
 
@@ -135,7 +147,8 @@ while left < right:
     </footer>
 
     <script src="../../index.js"></script>
-  <script src="../../copyToClipboard.js"></script>
+    <script src="../../copyToClipboard.js"></script>
+    <script src="../../JS/Flowcharts.js"></script>
     <script src="../../JS/problemTracker.js"></script>
 </body>
 
