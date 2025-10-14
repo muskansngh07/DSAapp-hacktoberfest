@@ -78,7 +78,7 @@
 low = 0
 high = n - 1
 while low <= high:
-    mid = (low + high) // 2
+    mid =low + (high-low)//2
     if nums[mid] == target:
         return mid
     else if nums[mid] < target:
@@ -103,7 +103,7 @@ return -1
 function binarySearch(nums, low, high, target):
     if low > high:
         return -1
-    mid = (low + high) // 2
+    mid =low + (high-low)//2
     if nums[mid] == target:
         return mid
     else if nums[mid] < target:
