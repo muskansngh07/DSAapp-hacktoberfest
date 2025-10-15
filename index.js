@@ -248,5 +248,22 @@ if (darkModeToggle) {
   startAutoScroll();
   document.querySelector('.card-container').addEventListener('mouseenter', stopAutoScroll);
   document.querySelector('.card-container').addEventListener('mouseleave', startAutoScroll);
-}
 
+  //Scroll to Top Button
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
