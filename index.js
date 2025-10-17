@@ -248,5 +248,6 @@ if (darkModeToggle) {
   startAutoScroll();
   document.querySelector('.card-container').addEventListener('mouseenter', stopAutoScroll);
   document.querySelector('.card-container').addEventListener('mouseleave', startAutoScroll);
-}
 
+  
+}
