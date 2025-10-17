@@ -523,3 +523,40 @@ body.dark-mode .vision .material-icons {
   transform: translateY(-4px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
+
+
+
+
+/* ---------------------- */
+/* Dark Mode Support       */
+/* ---------------------- */
+body.dark-mode .features ul li {
+  background: rgba(45, 45, 68, 0.5);
+  color: #e0e0e0;
+  box-shadow: none;
+}
+
+body.dark-mode .features ul li:hover {
+  background: rgba(187, 134, 252, 0.15);
+  transform: translateX(8px) scale(1.02);
+}
+
+body.dark-mode .features ul li a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .features ul li a::after {
+  background-color: #bb86fc;
+}
+
+body.dark-mode .features ul li a:hover {
+  color: #ffb3a0;
+}
+
+body.dark-mode .features ul li .material-icons {
+  color: #03dac6;
+}
+
+body.dark-mode .features ul li:hover .material-icons {
+  color: #bb86fc;
+}
