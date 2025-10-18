@@ -46,7 +46,9 @@
 
   <main>
     <h1>Detect Cycle in Linked List</h1>
-
+<p class="leetcode-link"><a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank" rel="noopener noreferrer">LeetCode #141 [Easy]</a></p>
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -79,6 +81,7 @@ while head != NULL:
     head = head.next
 return false
           </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+       <p class="think-line">💡 <strong>Think:</strong> Have I seen this node before? If yes, there's a cycle.</p>
 
     </section>
     <!-- Flowchart Section for Approach 1 -->
@@ -87,6 +90,7 @@ return false
       <div class="flowchart-container" style="display: none; margin-top: 20px">
         <img src="../Flowcharts/detectcycle1.jpg" alt="Detect Cycle Flowchart" class="flowchart-img" />
       </div>
+
     </section>
 
     <section class="approach-section">
@@ -107,6 +111,7 @@ while fast != NULL and fast.next != NULL:
         return true
 return false
           </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+      <p class="think-line">💡 <strong>Think:</strong> Do slow and fast pointers ever meet while moving 1× and 2×?</p>
 
     </section>
     <!-- Flowchart Section for Approach 2 -->
@@ -115,6 +120,7 @@ return false
       <div class="flowchart-container" style="display: none; margin-top: 20px">
         <img src="../Flowcharts/detectcycle2.jpg" alt="Detect Cycle Flowchart" class="flowchart-img" />
       </div>
+
     </section>
   </main>
 

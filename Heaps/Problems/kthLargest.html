@@ -45,7 +45,9 @@
 
   <main>
     <h1>Kth Largest / Smallest Element</h1>
-
+<p class="leetcode-link"><a href="https://leetcode.com/problems/kth-largest-element-in-an-array/" target="_blank" rel="noopener noreferrer">LeetCode #215 [Medium]</a></p>
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -82,7 +84,7 @@ return nums[k-1]  # kth smallest
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem1app1.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
-      </section>
+<p class="think-line">💡 <strong>Think:</strong> Just sort once and pick the kth from the end (largest) or start (smallest) — simple but not optimal for large n.</p>
 
     </section>
 
@@ -107,6 +109,8 @@ return heap root
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem1app2.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
+  <p class="think-line">💡 <strong>Think:</strong> Keep a size-k min-heap of largest-so-far; the root is the kth largest after one pass.</p>
+
       </section>
 
     <section class="approach-section">
@@ -132,7 +136,9 @@ else:
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem1app3.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
+  <p class="think-line">💡 <strong>Think:</strong> Partition like quicksort and recurse only into the side containing the kth element.</p>
       </section>
+
     </main>
 
   <script src="../../index.js"></script>
