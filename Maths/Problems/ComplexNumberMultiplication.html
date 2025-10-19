@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complex Number Multiplication - CodeDSA</title>
+    <link rel="stylesheet" href="../../CSS/AllProblems.css" />
+    <link rel="stylesheet" href="../../CSS/breadcrumb.css" />
+    <link rel="stylesheet" href="../../CSS/snake.css" />
+    <link rel="stylesheet" href="../../CSS/leetcodeButton.css" />
+    <link rel="stylesheet" href="../../CSS/Flowchart.css" />
+    <link rel="stylesheet" href="../../CSS/copyToClipboard.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="../../index.html" class="logo-container">
+        <div class="logo-img">
+          <img src="../../Images/logo.png" alt="Logo" />
+        </div>
+        <div class="logo">CodeDSA</div>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../about.html">About</a></li>
+          <li><a href="../../contact.html">Contact</a></li>
+        </ul>
+        <button id="snakeToggle" class="snake-btn">
+          <span style="margin-left: 20px">Snake Cursor</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb-container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../Math.html">Math</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Complex Number Multiplication
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <main>
+      <h1>Complex Number Multiplication</h1>
+
+      <!-- Problem Statement -->
+      <section class="problem-section">
+        <h2>Problem Statement</h2>
+        <p>
+          Given two complex numbers <strong>a + bi</strong> and
+          <strong>c + di</strong>, return their multiplication result in the
+          form <strong>(a*c - b*d) + (a*d + b*c)i</strong>.
+        </p>
+        <p>
+          <strong>Example:</strong> Input: "1+2i", "3+4i" → Output: "(-5+10i)"
+        </p>
+      </section>
+
+      <!-- Approach Sections -->
+      <section class="approach-section">
+        <h2>Approach 1: Direct Multiplication</h2>
+        <p>
+          <strong>Explanation:</strong> Split the strings to extract real and
+          imaginary parts, then apply the formula.
+        </p>
+        <p><strong>Time Complexity:</strong> O(1)</p>
+        <p><strong>Space Complexity:</strong> O(1)</p>
+        <pre class="pseudo-code">
+    parse a and b from first number
+    parse c and d from second number
+    real = a*c - b*d
+    imag = a*d + b*c
+    return real + " + " + imag + "i"
+      </pre
+        >
+        <button class="copyToClipboard" onclick="copyToClipboard(this)">
+          Copy!
+        </button>
+      </section>
+
+      <section class="approach-section">
+        <h2>Approach 2: Using Built-in Complex Number Type</h2>
+        <p>
+          <strong>Explanation:</strong> Use your language’s built-in complex
+          number type for multiplication.
+        </p>
+        <p><strong>Time Complexity:</strong> O(1)</p>
+        <p><strong>Space Complexity:</strong> O(1)</p>
+        <pre class="pseudo-code">
+    num1 = convert input1 to complex type
+    num2 = convert input2 to complex type
+    result = num1 * num2
+    return result as string
+      </pre
+        >
+        <button class="copyToClipboard" onclick="copyToClipboard(this)">
+          Copy!
+        </button>
+      </section>
+
+      <a
+        href="https://leetcode.com/problems/complex-number-multiplication/"
+        class="leetcode-btn"
+        target="_blank"
+      >
+        Solve on LeetCode
+      </a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Mrunalini Pachpute. All rights reserved.</p>
+    </footer>
+
+    <script src="../../index.js"></script>
+    <script src="../../JS/problemTracker.js"></script>
+    <script src="../../JS/Flowcharts.js"></script>
+    <script src="../../copyToClipboard.js"></script>
+  </body>
+</html>
