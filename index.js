@@ -10,12 +10,13 @@ document.querySelectorAll('.flowchart-btn').forEach((btn) => {
   });
 });
 document.addEventListener('DOMContentLoaded', () => {
-
-  const input = document.getElementById("searchInput");
+  const input = document.getElementById('searchInput');
   if (!input) return;
 
-  const text = "Search topics or problems...";
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const text = 'Search topics or problems...';
+  const prefersReduced = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
 
   if (prefersReduced) {
     input.placeholder = text;
@@ -27,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const type = () => {
     if (i < text.length) {
-      input.setAttribute("placeholder", text.substring(0, i + 1));
+      input.setAttribute('placeholder', text.substring(0, i + 1));
       i++;
       setTimeout(type, speed);
     }
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Start typing when visible or immediately
   const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         type();
         obs.disconnect();
@@ -46,63 +47,10 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(input);
 
   // Optional: stop animation when focused
-  input.addEventListener("focus", () => {
+  input.addEventListener('focus', () => {
     input.placeholder = text;
   });
 
-  
-  // Snake toggle logic with persistence
-  const toggleBtn = document.getElementById('snakeToggle');
-  if (toggleBtn) {
-    // Check localStorage for saved snake state
-    let snakeEnabled = localStorage.getItem('snakeEnabled') === 'true';
-    let trail = [];
-    // Initialize snake state based on saved preference
-    if (snakeEnabled) {
-      enableSnake();
-    }
-    toggleBtn.addEventListener('click', () => {
-      snakeEnabled = !snakeEnabled;
-      // Save state to localStorage
-      localStorage.setItem('snakeEnabled', snakeEnabled);
-      if (snakeEnabled) {
-        enableSnake();
-      } else {
-        disableSnake();
-      }
-    });
-    function enableSnake() {
-      document.body.classList.add('snake-cursor');
-      document.addEventListener('mousemove', drawSnake);
-      toggleBtn.innerHTML =
-        '<span style="margin-left: 20px;">Disable Snake</span>';
-      toggleBtn.classList.add('active');
-    }
-    function disableSnake() {
-      document.body.classList.remove('snake-cursor');
-      document.removeEventListener('mousemove', drawSnake);
-      clearTrail();
-      toggleBtn.innerHTML =
-        '<span style="margin-left: 20px;">Snake Cursor</span>';
-      toggleBtn.classList.remove('active');
-    }
-    function drawSnake(e) {
-      const seg = document.createElement('div');
-      seg.className = 'snake-segment';
-      seg.style.left = e.clientX + 'px';
-      seg.style.top = e.clientY + 'px';
-      document.body.appendChild(seg);
-      trail.push(seg);
-      setTimeout(() => {
-        seg.remove();
-        trail.shift();
-      }, 500);
-    }
-    function clearTrail() {
-      trail.forEach((seg) => seg.remove());
-      trail = [];
-    }
-  }
   // Recently Viewed Problems Logic
   const recentlyViewedList = document.getElementById('recently-viewed-list');
   const clearHistoryBtn = document.getElementById('clear-history-btn');
@@ -139,11 +87,9 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRecentProblems();
   }
 
-
   // Topics Filter Dropdown Toggle Logic
   const dropdownBtn = document.getElementById('topicsDropdownBtn');
   const dropdownContent = document.getElementById('topicsDropdownContent');
-
 
   if (dropdownBtn && dropdownContent) {
     // Toggle dropdown on button click
@@ -152,15 +98,16 @@ document.addEventListener('DOMContentLoaded', () => {
       dropdownContent.classList.toggle('show');
     });
 
-
     // Close dropdown when clicking outside
     document.addEventListener('click', (e) => {
-      if (!dropdownBtn.contains(e.target) && !dropdownContent.contains(e.target)) {
+      if (
+        !dropdownBtn.contains(e.target) &&
+        !dropdownContent.contains(e.target)
+      ) {
         dropdownContent.classList.remove('show');
       }
     });
   }
-
 
   // Topics Filter and Search Logic
   const topicFilters = document.querySelectorAll('.topic-filter');
@@ -195,10 +142,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Progress Tracking Logic
-  const completedTopics = JSON.parse(localStorage.getItem('completedTopics')) || [];
+  const completedTopics =
+    JSON.parse(localStorage.getItem('completedTopics')) || [];
 
   // Add progress elements to cards
-  cards.forEach(card => {
+  cards.forEach((card) => {
     const indicator = document.createElement('span');
     indicator.className = 'progress-indicator';
     indicator.textContent = '✓';
@@ -211,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Update progress
   function updateProgress() {
-    cards.forEach(card => {
+    cards.forEach((card) => {
       const topic = card.getAttribute('data-topic');
       const bar = card.querySelector('.progress-bar');
       if (completedTopics.includes(topic)) {
@@ -230,15 +178,71 @@ document.addEventListener('DOMContentLoaded', () => {
   cards.forEach((card, index) => {
     card.style.animationDelay = `${index * 0.1}s`;
   });
-
-
 });
+
+// Snake toggle logic with persistence
+const toggleBtn = document.getElementById('snakeToggle');
+if (toggleBtn) {
+  // Check localStorage for saved snake state
+  let snakeEnabled = localStorage.getItem('snakeEnabled') === 'true';
+  let trail = [];
+
+  if (snakeEnabled) {
+    enableSnake();
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    snakeEnabled = !snakeEnabled;
+    localStorage.setItem('snakeEnabled', snakeEnabled);
+    if (snakeEnabled) {
+      enableSnake();
+    } else {
+      disableSnake();
+    }
+  });
+
+  function enableSnake() {
+    document.body.classList.add('snake-cursor');
+    document.addEventListener('mousemove', drawSnake);
+    toggleBtn.innerHTML =
+      '<span style="margin-left: 20px;">Disable Snake</span>';
+    toggleBtn.classList.add('active');
+  }
+
+  function disableSnake() {
+    document.body.classList.remove('snake-cursor');
+    document.removeEventListener('mousemove', drawSnake);
+    clearTrail();
+    toggleBtn.innerHTML =
+      '<span style="margin-left: 20px;">Snake Cursor</span>';
+    toggleBtn.classList.remove('active');
+  }
+
+  function drawSnake(e) {
+    const seg = document.createElement('div');
+    seg.className = 'snake-segment';
+    seg.style.left = e.clientX + 'px';
+    seg.style.top = e.clientY + 'px';
+    document.body.appendChild(seg);
+    trail.push(seg);
+    setTimeout(() => {
+      seg.remove();
+      trail.shift();
+    }, 500);
+  }
+
+  function clearTrail() {
+    trail.forEach((seg) => seg.remove());
+    trail = [];
+  }
+}
+
 function navigateTo(page) {
   window.location.href = page;
 }
 
 // Dark Mode toggle logic with persistence
-const darkModeToggle = document.getElementById("darkModeToggle");
+const darkModeToggle = document.getElementById('darkModeToggle');
 if (darkModeToggle) {
   // Check localStorage for saved dark mode state
   let darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
@@ -248,7 +252,7 @@ if (darkModeToggle) {
     enableDarkMode();
   }
 
-  darkModeToggle.addEventListener("click", () => {
+  darkModeToggle.addEventListener('click', () => {
     darkModeEnabled = !darkModeEnabled;
     // Save state to localStorage
     localStorage.setItem('darkModeEnabled', darkModeEnabled);
@@ -261,15 +265,15 @@ if (darkModeToggle) {
   });
 
   function enableDarkMode() {
-    document.body.classList.add("dark-mode");
+    document.body.classList.add('dark-mode');
     darkModeToggle.innerHTML = '☀️ Light Mode';
-    darkModeToggle.classList.add("active");
+    darkModeToggle.classList.add('active');
   }
 
   function disableDarkMode() {
-    document.body.classList.remove("dark-mode");
+    document.body.classList.remove('dark-mode');
     darkModeToggle.innerHTML = '🌙 Dark Mode';
-    darkModeToggle.classList.remove("active");
+    darkModeToggle.classList.remove('active');
   }
 
   // Auto-scroll for card container
@@ -278,7 +282,10 @@ if (darkModeToggle) {
     autoScrollInterval = setInterval(() => {
       const container = document.querySelector('.card-container');
       container.scrollLeft += 300;
-      if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+      if (
+        container.scrollLeft >=
+        container.scrollWidth - container.clientWidth
+      ) {
         container.scrollLeft = 0;
       }
     }, 3000);
@@ -287,8 +294,10 @@ if (darkModeToggle) {
     clearInterval(autoScrollInterval);
   }
   startAutoScroll();
-  document.querySelector('.card-container').addEventListener('mouseenter', stopAutoScroll);
-  document.querySelector('.card-container').addEventListener('mouseleave', startAutoScroll);
-
-  
+  document
+    .querySelector('.card-container')
+    .addEventListener('mouseenter', stopAutoScroll);
+  document
+    .querySelector('.card-container')
+    .addEventListener('mouseleave', startAutoScroll);
 }
