@@ -326,22 +326,22 @@ If you find this repo useful, **please give it a star** to help others find it.
 
 
 ## 🌟 Our Stargazers
-
-<div style="text-align:center;">
-  <img src="https://reporoster.com/forks/dark/MrunaliniPachpute/DSA-Patterns-and-Problems"
-       alt="Stargazers"
-       style="max-width:100%; height:auto; display:block; margin:auto;" />
-</div>
-
-
+<a href="https://github.com/MrunaliniPachpute/DSA-Patterns-and-Problems/stargazers">
+  <img 
+    src="https://reporoster.com/stars/dark/MrunaliniPachpute/DSA-Patterns-and-Problems" 
+    alt="Stargazers" 
+    width="800" 
+  />
+</a>
 
 ## 🍴 Our Forkers
-
-<div style="text-align:center;">
-  <img src="https://reporoster.com/forks/dark/MrunaliniPachpute/DSA-Patterns-and-Problems"
-       alt="Forkers"
-       style="max-width:100%; height:auto; display:block; margin:auto;" />
-</div>
+<a href="https://github.com/MrunaliniPachpute/DSA-Patterns-and-Problems/network/members">
+  <img 
+    src="https://reporoster.com/forks/dark/MrunaliniPachpute/DSA-Patterns-and-Problems" 
+    alt="Forkers" 
+    width="800" 
+  />
+</a>
 
 
 <div align="center">
