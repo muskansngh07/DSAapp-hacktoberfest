@@ -51,7 +51,12 @@
 
   <main>
     <h1>Square Root (Binary Search on Answer)</h1>
+    <!--Leetcode link-->
 
+    <p class="leetcode-link"><a href="https://leetcode.com/problems/sqrtx/" target="_blank" rel="noopener noreferrer">LeetCode #69 [Easy]</a></p>
+<!--Print / Export control-->
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -78,6 +83,7 @@ for i in 0..x:
         return i-1
 return x
           </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+<p class="think-line">💡 <strong>Think:</strong> Increment i until i² crosses x, then step back by one.</p>
 
     </section>
 
@@ -103,6 +109,7 @@ while low <= high:
         high = mid - 1
 return ans
           </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+<p class="think-line">💡 <strong>Think:</strong> Search mid in [0,x]; compare mid² with x to tighten bounds.</p>
 
     </section>
 
@@ -120,6 +127,7 @@ while guess*guess - x > epsilon:
     guess = (guess + x/guess) / 2
 return int(guess)
           </pre>  <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+<p class="think-line">💡 <strong>Think:</strong> Iterate guess = (guess + x/guess)/2 until convergence, then floor.</p>
 
     </section>
     <a 

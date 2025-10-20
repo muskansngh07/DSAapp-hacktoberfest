@@ -51,7 +51,11 @@
 
   <main>
     <h1>Tree Traversals</h1>
-
+    <!--Leetcode link-->
+<p class="leetcode-link"><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="noopener noreferrer">LeetCode #94 [Easy]</a></p>
+<!--Print / Export control-->
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -109,6 +113,7 @@ postorder(node):
     postorder(node.right)
     print(node.val)
           </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+<p class="think-line">💡 <strong>Think:</strong> Visit left, node, right (or node first, or node last) using call stack to control order.</p>
 
     </section>
 
@@ -132,6 +137,7 @@ while curr != NULL or stack not empty:
     print(curr.val)
     curr = curr.right
           </pre> <button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+<p class="think-line">💡 <strong>Think:</strong> Simulate recursion with a stack to push lefts, pop node, then go right.</p>
 
     </section>
 
@@ -163,12 +169,14 @@ while curr != NULL:
 
       </pre
         ><button class="copyToClipboard" onclick="copyToClipboard(this)">Copy!</button>
+        <p class="think-line">💡 <strong>Think:</strong> Thread predecessors temporarily to traverse in O(1) space without stack or recursion.</p>
       </section>
          <section>
   <button id="toggleBtn" class="toggle-btn">Show Flowchart ▲</button>
   <div id="flowchart" class="flowchart-container">
     <img src="../Flowcharts/treetraversal.png" alt="Height & Diameter Flowchart" height="1000px" width="850px"/>
   </div>
+
 </section>
   <a 
     href="https://leetcode.com/problems/binary-tree-preorder-traversal/" 

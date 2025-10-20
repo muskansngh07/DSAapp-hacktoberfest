@@ -51,7 +51,11 @@
 
   <main>
     <h1>Group Anagrams</h1>
-
+    <!--Leetcode link-->
+<p class="leetcode-link"><a href="https://leetcode.com/problems/group-anagrams/" target="_blank" rel="noopener noreferrer">LeetCode #49 [Medium]</a></p>
+<!--Print / Export control-->
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -90,6 +94,8 @@ return groups
         <button class="fc-button">View Flowchart</button>
         <img src="../Flowcharts/4stringapproach1.png" alt="Heap Sort Flowchart" class="fc-image" />
       </div>
+      <p class="think-line">💡 <strong>Think:</strong> Compare sorted forms pairwise to cluster matching words together.</p>
+
     </section>
 
     <section class="approach-section">
@@ -110,6 +116,8 @@ return list(map.values())
         <button class="fc-button">View Flowchart</button>
         <img src="../Flowcharts/4stringapproach2.png" alt="Heap Sort Flowchart" class="fc-image" />
       </div>
+      <p class="think-line">💡 <strong>Think:</strong> Use sorted(word) as a hash key to bucket anagram groups.</p>
+
     </section>
 
     <section class="approach-section">
@@ -133,6 +141,7 @@ return list(map.values())
         <button class="fc-button">View Flowchart</button>
         <img src="../Flowcharts/4stringapproach1.png" alt="Heap Sort Flowchart" class="fc-image" />
       </div>
+      <p class="think-line">💡 <strong>Think:</strong> Hash a 26-count tuple per word to group by identical character frequencies.</p>
 
     </section>
     <a 

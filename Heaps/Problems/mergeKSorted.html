@@ -46,7 +46,11 @@
 
   <main>
     <h1>Merge K Sorted Arrays / Lists</h1>
-
+    <!--Leetcode link-->
+<p class="leetcode-link"><a href="https://leetcode.com/problems/merge-k-sorted-lists/" target="_blank" rel="noopener noreferrer">LeetCode #23 [Hard]</a></p>
+<!--Print / Export control-->
+<button onclick="window.print()" class="export-btn">📄 Print/Save as PDF</button>
+  <link rel="stylesheet" href="../../CSS/print.css" media="print">
     <!-- Problem Statement -->
     <section class="problem-section">
       <h2>Problem Statement</h2>
@@ -83,6 +87,8 @@ return merged
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem2app1.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
+  <p class="think-line">💡 <strong>Think:</strong> Flatten everything then sort the whole pile in one go.</p>
+
       </section>
 
     </section>
@@ -111,6 +117,8 @@ return result
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem2app2.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
+  <p class="think-line">💡 <strong>Think:</strong> Push each list's head; repeatedly pop the smallest and push its next to build the merged order.</p>
+
       </section>
 
     <section class="approach-section">
@@ -134,6 +142,8 @@ function mergeKArrays(arrays):
     <button class="fc-button">View Flowchart</button>
     <img src="../Flowcharts/heapproblem2app3.png" alt="Heap Sort Flowchart" class="fc-image" />
   </div>
+  <p class="think-line">💡 <strong>Think:</strong> Merge pairs of lists recursively, halving K each round.</p>
+
       </section>
       <a 
           href="https://leetcode.com/problems/merge-k-sorted-lists/" 
